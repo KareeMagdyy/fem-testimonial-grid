@@ -132,3 +132,33 @@ h2 {
 .testimonial-box:nth-child(5) img {
   border-color: var(--clr-white);
 }
+
+@media (min-width: 998px) {
+  .testimonials {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .testimonial-box {
+    margin-bottom: 0;
+  }
+
+  .testimonial-box:nth-child(1) {
+    grid-column: span 2;
+  }
+  .testimonial-box:nth-child(4) {
+    grid-column: span 2;
+  }
+  .testimonial-box:nth-child(5) {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+  }
+}
+
+@media (min-width: 1140px) {
+  .container {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+}
